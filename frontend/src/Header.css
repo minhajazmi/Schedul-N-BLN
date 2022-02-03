@@ -1,0 +1,276 @@
+@import-normalize;
+
+  .header h1 {
+    color: #929094;
+    font-size: 24px;
+  }
+
+  .header h2 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  @media (min-width: 768px) {
+  
+    .header {
+      display: flex;
+      flex-wrap: row wrap;
+      justify-content: space-evenly;
+      margin: 0 40px 0 40px;
+      height: 122px;
+      box-shadow: 0px 15px 5px -15px rgba(0, 0, 0, 0.1);
+    }
+
+    .headerItem1 {
+      align-self: center;
+    }
+  
+    .headerItem2 {
+      align-self: center;
+    } 
+  }
+
+  .modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 196px;
+    background-color: #EFEFFE;
+    width: 755px;
+    height: 490px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #47464A;
+    font-size: 30px;
+    padding: 20px 20px 45px 45px;
+    z-index: 4; 
+
+   }
+
+   .modalContainer {
+     align-self: flex-end;
+   }
+
+   .modal button {
+    border-radius: 20px;
+    background-color: #47464A;
+    border: solid #47464A;
+    color: #FFFFFF;
+   }
+
+   .overlay {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 3;
+}
+
+.loginConnect span, .signUpConnect span {
+color:#4C57A9;
+font-weight: bold;
+}
+
+.signUpContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 135px;
+  align-items: center;
+  justify-content: flex-start;
+  background: #FDF6F4;
+  box-shadow: 0px 0.69px 4.14px 1.38px rgba(0, 0, 0, 0.16);
+  border-radius: 16px; 
+  width: 552px;
+  height: 670px;
+  gap: 1px;
+}
+
+.signUp {
+  position: fixed;
+  align-self: flex-end;
+  margin: 20px 20px;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  width: 414;
+}
+
+.signUpConnect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.loginConnect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.eyeL {
+  position: absolute;
+  top: 34.5%;
+  right: 16%;
+}
+
+.eyeS {
+  position: absolute;
+  top: 48%;
+  right: 16%;
+}
+
+.signUpContainer h1 {
+  text-align: center;
+  color: #4C57A9;
+  font-size: 38px;
+  font-weight: 600;
+  margin: 35px 0 0 0;
+}
+
+.signUpContainer p {
+  color: #838383;
+  font-size: 14px;
+}
+
+.hrSec {
+  width: 414px;
+  text-align: center;
+  color: #838383;
+  font-weight: bold;
+}
+
+.hrSec hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.signUpForm input[type="text"] {
+  color: '#FFFFFF';
+  font-family: inherit;
+  padding: 14px 20px 14px 20px;
+  border: 1px solid #838383;
+  font-size: 14px;
+  border-radius: 11px;
+  margin: 0;
+}
+
+.signUpForm input[type="password"] {
+  color: '#FFFFFF';
+  font-family: inherit;
+  padding: 14px 20px 14px 20px;
+  border: 1px solid #838383;
+  font-size: 14px;
+  border-radius: 11px;
+}
+
+.signUpForm input[type="password"]:focus {
+  outline: 0 none;
+}
+
+.signUpForm label {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  margin-bottom: 7px;
+  margin-top: 25px;
+}
+
+.accountButton {
+  background-color: #4c57a9;
+  border: 2px solid #4c57a9;
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  height: 45px;
+  width: 414px;
+  margin-top: 5px;
+}
+
+.accountButton:hover {
+  background-color: #9aa5fd;
+  border: 2px solid #9aa5fd;
+}
+
+.primaryButton:active {
+  background-color: #000965;
+  border: 2px solid #000965;
+}
+
+.externalButton {
+  background-color: #FFFFFF;
+  border: 1px solid #1B1B1F;
+  border-radius: 11px;
+  color: #1B1B1F;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  height: 45px;
+  width: 414px;
+}
+.modalTeam {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    top: 100px;
+    background-color: #EFEFFE;
+    width: 755px;
+    height: 670px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #47464A;
+    font-size: 30px;
+    padding: 20px 20px 45px 45px;
+    z-index: 4; 
+}
+
+.teamContainer {
+  font-size: 16px;
+}
+
+.teamContainer img {
+  border-radius: 50%;
+}
+
+.teamImages {
+display: flex;
+flex-direction: flex-row;
+}
+
+figure {
+  text-align: center;
+  margin: 0px 20px 0 20px;
+}
+
+figcaption {
+  margin: 5px 0 10px 0;
+}
+
+.overlay h2 {
+  font-size: 36px;
+  margin: 0 0 0 0;
+  font-weight: bold;
+}

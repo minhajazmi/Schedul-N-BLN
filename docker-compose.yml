@@ -1,0 +1,49 @@
+version: "3"
+
+networks:
+  isolation-network:
+    driver: bridge
+
+services:
+  frontend:
+    image: frontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend/src:/app/src
+    networks:
+      - isolation-network
+    environment:
+      - API_URL=backend
+  ds-server:
+    image: ds-server
+    build:
+      context: ds-server
+      dockerfile: Dockerfile
+    ports:
+      - 5001:5000
+    networks:
+      - isolation-network
+    volumes:
+      - ./ds-server/src:/app/src
+  backend:
+    image: backend
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    environment:
+      - DS_API_URL=ds-server
+      - MONGODB_CONNECTION_STRING=mongodb://mongo/scheduleNApp
+    ports:
+      - 4000:4000
+    networks:
+      - isolation-network
+    volumes:
+      - ./backend/src:/app/src
+  mongo:
+    image: mongo
+    ports:
+      - 27018:27017
